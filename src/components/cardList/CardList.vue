@@ -31,4 +31,7 @@ export default {
     border-bottom: 1px solid rgba(128, 128, 128, 0.58);
     padding: 1rem;
 }
+.cardList:last-child{
+    border-bottom: none;
+}
 </style>
