@@ -6,15 +6,29 @@
             </div>
         </div>
         <div class="card-body">
-            <div class="d-flex justify-content-between align-items-center">
-                <input type="checkbox" id="list">
-                <label for="list" class="user-select-none">Lorem ipsum dolor sit amet.</label>
+            <div class="d-flex justify-content-between align-items-center mt-1 cardList" v-for="card in cards">
+                <input type="checkbox" id="{{card.id}}">
+                <label for="{{card.id}}" class="user-select-none">{{ card.title }}</label>
                 <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
             </div>
         </div>
     </div>
 </template>
 
-<script></script>
+<script>
+export default {
+    props: {
+        cards: {
+            type: Object,
+            required: true
+        }
+    }
+}
+</script>
 
-<style></style>
+<style scoped>
+.cardList{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.58);
+    padding: 1rem;
+}
+</style>
