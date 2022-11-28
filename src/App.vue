@@ -4,14 +4,16 @@
             <h1>To Do List</h1>
         </div>
         <Form/>
+        <CardList/>
     </div>
 </template>
 
 <script>
 import Form from "@/components/form/Form.vue";
+import CardList from "@/components/cardList/CardList.vue";
 
 export default {
-    components: {Form}
+    components: {CardList, Form}
 }
 </script>
 
